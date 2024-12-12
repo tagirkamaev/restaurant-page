@@ -1,0 +1,33 @@
+#content {
+    font-family: 'Arial', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  #homepage {
+    text-align: center;
+  }
+  
+  #restaurant-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #555;
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
