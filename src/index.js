@@ -1,3 +1,6 @@
 import "./styles.css";
+import loadHomePage from "./homepage.js";
 
-console.log("I am Tagir");
+document.addEventListener("DOMContentLoaded", () => {
+  loadHomePage();
+});
