@@ -86,3 +86,53 @@
 .menu-section:last-child {
     margin-bottom: 0;
 }
+
+
+/* general header styling */
+header {
+  background-color: #2c3e50; 
+  padding: 20px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* slight shadow for depth */
+}
+
+/* nav bar */
+header nav {
+  display: flex;
+  justify-content: center; /* center buttons horizontally */
+  gap: 20px; /* space between buttons */
+}
+
+/* buttons styling */
+header nav button {
+  background-color: #ecf0f1; /* light background for contrast */
+  color: #2c3e50; /* navy text color */
+  font-size: 1em;
+  font-family: 'Arial', sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* smooth transition effect */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+header nav button:hover {
+  background-color: #3498db; /* light blue on hover */
+  color: white;
+  transform: scale(1.1); /* slight scaling on hover */
+}
+
+header nav button:active {
+  background-color: #2980b9; /* darker blue when clicked */
+  transform: scale(1); /* reset scale to normal */
+}
+
+/* mobile responsiveness */
+@media (max-width: 768px) {
+  header nav {
+      flex-direction: column; /* stack buttons vertically */
+      align-items: center;
+      gap: 15px; /* adjust spacing */
+  }
+}
