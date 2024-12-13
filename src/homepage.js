@@ -1,3 +1,5 @@
+import restaurantImage from "./restaurant.jpg";
+
 const loadHomePage = () => {
   const content = document.getElementById("content");
 
@@ -8,9 +10,7 @@ const loadHomePage = () => {
   // adding image
   const restaurantPhoto = document.createElement("img");
   restaurantPhoto.id = "restaurant-image";
-  restaurantPhoto.classList.add(
-    "src=https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  );
+  restaurantPhoto.src = restaurantImage;
   restaurantPhoto.alt = "A beautiful view of our restaurant";
   homepage.appendChild(restaurantPhoto);
 
