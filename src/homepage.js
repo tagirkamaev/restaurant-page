@@ -3,6 +3,8 @@ import restaurantImage from "./restaurant.jpg";
 const loadHomePage = () => {
   const content = document.getElementById("content");
 
+  content.innerHTML = "";
+
   // create homepage container
   const homepage = document.createElement("div");
   homepage.id = "homepage";
