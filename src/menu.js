@@ -2,14 +2,47 @@ const loadMenuPage = () => {
   // create variable for div content
   const content = document.getElementById("content");
 
-  // create containers for each section of menu: salads, main, deserts, beverages
-  const salads = document.createElement("div");
+  // clear the content div
+  content.innerHTML = "";
 
-  const mainCourse = document.createElement("div");
+  // creating menu container
+  const menuContainer = document.createElement("div");
+  menuContainer.classList.add("menu-container");
 
-  const deserts = document.createElement("div");
+  // iterating menu categories
+  for (const [category, items] of Object.entries(menuData)) {
+    const section = document.createElement("div");
+    section.classList.add("menu section");
 
-  const beverages = document.createElement("div");
+    const sectionTitle = document.createElement("h2");
+    sectionTitle.textContent =
+      category.charAt(0).toUpperCase() + category.slice(1);
+    section.appendChild(sectionTitle);
+
+    // adding items from categories
+    items.forEach((item) => {
+      const menuItem = document.createElement("div");
+      menuItem.classList.add("menu-item");
+
+      const itemName = document.createElement("h3");
+      itemName.textContent = item.name;
+      menuItem.appendChild(itemName);
+
+      const itemDescription = document.createElement("p");
+      itemDescription.textContent = item.description;
+      menuItem.appendChild(itemDescription);
+
+      const itemPrice = document.createElement("p");
+      itemPrice.textContent = item.price;
+      itemPrice.classList.add("price");
+      menuItem.appendChild(itemPrice);
+
+      section.appendChild(menuItem);
+    });
+
+    menuContainer.appendChild(section);
+  }
+  content.appendChild(menuContainer);
 
   // create a structure for menu data
   const menuData = {
